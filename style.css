@@ -1,0 +1,133 @@
+.mainstyle {
+  flex: 1;
+}
+
+
+/* CSS files add styling rules to your content */
+body {
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1c1c26;
+  text-align: left;
+  background-color: #fff;
+}
+
+.sectionstyle {
+  max-width: 1340px;
+  position: relative;
+  margin: 0px auto;
+  padding: 2rem;
+}
+
+@media (max-width: 1399.98px) {
+  .sectionstyle {
+    max-width: 96%;
+  }
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 70px;
+  font-family: "RobotoLight"; 
+}
+
+.btncontainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.btncontainer button {
+  margin-bottom: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.btn {
+  border-radius: 3px;
+  background-color: #0050B5;
+  color: #fff;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 8px 32px;
+  cursor: pointer;
+  border: none;
+  word-break: keep-all;
+  box-shadow: none;
+  font-family: "RobotoLight"; 
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn.active {
+  background-color: #0050B5;
+  color: #fff;
+  box-shadow: 0 3px 5px 0px #82A3FF;
+}
+
+div {
+  display: block;
+}
+
+.spacing {
+  justify-content: space-evenly;
+}
+
+.group {
+  justify-content: center;
+  flex-basis: 45%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.inputstyle {
+  position: relative;
+  left: 2.3%;
+  width: 100%;
+  min-height: 4rem;
+  max-height: 4rem;
+  height: 100%;
+  resize: none;
+  border-color: #aaa;
+  border-width: 1px;
+  overflow-y: auto;
+  padding: 8px 9px;
+}
+
+.spanstyle {
+  white-space: pre-line;
+  position: relative;
+  left: 22px;
+  top: -13px;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 500px) {
+  .field {
+    flex-direction: column;
+  }
+  .group {
+    position: relative;
+    left: -8px;
+    width: 93.8%;
+  }
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  margin: 0
+}
+
+@font-face {
+  font-family: "RobotoLight";
+  src: url("https://cdn.glitch.com/adc662df-a807-4e00-9f53-735789d29e45%2FRoboto-Light.ttf?v=1607081919222");
+}

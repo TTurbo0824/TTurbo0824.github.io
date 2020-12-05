@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rita/1.3.94/rita-full.min.js"></script>
+    <script src="https://unpkg.com/compromise@13.5.0/builds/compromise.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <script>
+        document.onkeydown = function (evt) {
+            var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+            if (keyCode == 27) {
+                document.getElementById("text-input").value = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <main class="mainstyle">
+        <section class="sectionstyle">
+            <h2 class "intro">Text2Emoji translates text into emoji<br>
+                Keep sentences short for better performance<br>Enjoy!</h2>
+            <div class="field btncontainer">
+                <button class="btn" id="emoji">get emoji</button>
+                <button class="btn" id="clearButton">clear</button>
+            </div>
+            <div class="field spacing">
+                <div class="group"><textarea class="inputstyle" rows="2" cols="20" id="text-input"
+                        contenteditable="true" spellcheck="true" placeholder="press esc to clear the input"></textarea></div>
+                <div class="group">
+                    <span class="spanstyle" id="sentence" class="sentence"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
