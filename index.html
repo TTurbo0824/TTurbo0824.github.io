@@ -14,24 +14,38 @@
                 document.getElementById("text-input").value = "";
             }
         }
+
+        function outFunc() {
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
     </script>
 </head>
 
 <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <main class="mainstyle">
         <section class="sectionstyle">
-            <h2 class "intro">Text2Emoji translates text into emoji<br>
-                Keep sentences short for better performance<br>Enjoy!</h2>
+            <h2 class="intro">Text2Emoji translates text into emoji<br>
+                Keep sentences short for optimal performance<br>Enjoy!</h2>
             <div class="field btncontainer">
                 <button class="btn" id="emoji">get emoji</button>
+                <button onmouseout="outFunc()" class="btn tooltip" id="copy"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                    📋</button>
                 <button class="btn" id="clearButton">clear</button>
+
             </div>
             <div class="field spacing">
                 <div class="group"><textarea class="inputstyle" rows="2" cols="20" id="text-input"
-                        contenteditable="true" spellcheck="true" placeholder="press esc to clear the input"></textarea></div>
-                <div class="group">
-                    <span class="spanstyle" id="sentence" class="sentence"></span>
+                        contenteditable="true" spellcheck="true" placeholder="press esc to clear the input"></textarea>
                 </div>
+                <div class="group">
+                    <span class="spanstyle" id="sentence"></span>
+                </div>
+            </div>
+            <div id="footer">
+                <p>made by <a href="https://www.kyungjooha.com/about">KJ</a>.
+                find this on <a href="https://github.com/TTurbo0824/text2emoji">github</a>.</p>
             </div>
         </section>
     </main>

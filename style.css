@@ -1,36 +1,39 @@
+html {
+  transform: scale(0.9);
+  transform-origin: 200px 0;
+  max-height: 720px;
+}
+
 .mainstyle {
   flex: 1;
 }
 
-
-/* CSS files add styling rules to your content */
 body {
   font-family: Lato, sans-serif;
-  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #1c1c26;
   text-align: left;
-  background-color: #fff;
+
 }
 
 .sectionstyle {
-  max-width: 1340px;
+  max-width: 950px;
   position: relative;
   margin: 0px auto;
   padding: 2rem;
 }
 
-@media (max-width: 1399.98px) {
+@media (max-width: 949.98px) {
   .sectionstyle {
     max-width: 96%;
   }
 }
 
 h2 {
+  color: #000000;
   margin-top: 10px;
   margin-bottom: 70px;
-  font-family: "RobotoLight"; 
+  font-family: "RobotoLight";
 }
 
 .btncontainer {
@@ -46,29 +49,22 @@ h2 {
 }
 
 .btn {
+  font-family: "RobotoLight";
   border-radius: 3px;
   background-color: #0050B5;
   color: #fff;
-  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   padding: 8px 32px;
-  cursor: pointer;
   border: none;
-  word-break: keep-all;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   box-shadow: none;
-  font-family: "RobotoLight"; 
+  word-break: keep-all;
 }
 
-.btn:hover,
-.btn:active,
-.btn:focus,
-.btn.active {
+.btn:hover {
   background-color: #0050B5;
   color: #fff;
-  box-shadow: 0 3px 5px 0px #82A3FF;
-}
-
-div {
-  display: block;
+  box-shadow: 0 3px 4px 0 #82A3FF;
 }
 
 .spacing {
@@ -77,6 +73,7 @@ div {
 
 .group {
   justify-content: center;
+  font-size: 1rem;
   flex-basis: 45%;
   flex-grow: 0;
   flex-shrink: 0;
@@ -85,12 +82,13 @@ div {
 
 .inputstyle {
   position: relative;
-  left: 2.3%;
+  left: 2.1%;
   width: 100%;
   min-height: 4rem;
   max-height: 4rem;
   height: 100%;
   resize: none;
+  color: #000000c1;
   border-color: #aaa;
   border-width: 1px;
   overflow-y: auto;
@@ -98,7 +96,6 @@ div {
 }
 
 .spanstyle {
-  white-space: pre-line;
   position: relative;
   left: 22px;
   top: -13px;
@@ -109,22 +106,113 @@ div {
   flex-direction: row;
 }
 
+button,
+input,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  visibility: visible;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:focus {
+  outline: 0;
+}
+
+.tooltip:hover .tooltiptext {
+  outline: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+#footer {
+  width: 75%;
+  margin-top: 350px;
+  margin-left:  auto;
+  margin-right:  auto;
+  padding-top: 15px;
+  border-top: 2px solid #0050B5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#footer>p {
+  text-transform: uppercase;
+  text-align: center;
+
+  font-size: 11px;
+  letter-spacing: .1em;
+  padding-right: 6px;
+}
+
+a:link,
+a:visited {
+  color: #0050B5;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 500px) {
+
   .field {
     flex-direction: column;
   }
+
   .group {
     position: relative;
     left: -8px;
     width: 93.8%;
   }
-}
 
-button,
-input,
-textarea {
-  font: inherit;
-  margin: 0
+  .intro {
+    font-size: 20px;
+    margin-bottom: 30px;
+
+  }
+
+  .tooltip:hover .tooltiptext {
+    display: none;
+  }
+
+  #footer {
+    margin-top: 250px;
+    width: 100%;
+  }
+
+  #footer>p {
+    font-size: 12px;
+  }
 }
 
 @font-face {
