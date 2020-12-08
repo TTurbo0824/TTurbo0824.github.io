@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+    <title>Text2Emoji</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rita/1.3.94/rita-full.min.js"></script>
     <script src="https://unpkg.com/compromise@13.5.0/builds/compromise.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📌</text></svg>">
     <meta charset="utf-8" />
     <script>
         document.onkeydown = function (evt) {
@@ -30,7 +32,8 @@
                 Keep sentences short for optimal performance<br>Enjoy!</h2>
             <div class="field btncontainer">
                 <button class="btn" id="emoji">get emoji</button>
-                <button onmouseout="outFunc()" class="btn tooltip" id="copy"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                <button onmouseout="outFunc()" class="btn tooltip" id="copy"><span class="tooltiptext"
+                        id="myTooltip">Copy to clipboard</span>
                     📋</button>
                 <button class="btn" id="clearButton">clear</button>
 
@@ -44,8 +47,7 @@
                 </div>
             </div>
             <div id="footer">
-                <p>made by <a href="https://www.kyungjooha.com/about">KJ</a>.
-                find this on <a href="https://github.com/TTurbo0824/text2emoji">github</a>.</p>
+                <p>made by <a href="https://www.kyungjooha.com/about">KJ Ha</a>.
             </div>
         </section>
     </main>
